@@ -6,21 +6,29 @@
     <title>CMD Teamproject - 생산형 AI</title>
     <link rel="stylesheet" href="style.css?v=1" />
     <style>
-      body {
-        margin: 0;
-        font-family: 'Segoe UI', sans-serif;
-        background-color: var(--bg-color);
-        color: var(--text-color);
-      }
-
       :root {
         --bg-color: #ffffff;
         --text-color: #000000;
+        --panel-bg: #f9f9f9;
+        --table-head-bg: #eee;
+        --accordion-bg: #f2f2f2;
+        --accordion-text: #333;
       }
 
       [data-theme='dark'] {
         --bg-color: #121212;
         --text-color: #f1f1f1;
+        --panel-bg: #1e1e1e;
+        --table-head-bg: #333;
+        --accordion-bg: #2a2a2a;
+        --accordion-text: #f1f1f1;
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
       }
 
       .navbar {
@@ -54,6 +62,35 @@
         line-height: 1.8;
       }
 
+      .accordion {
+        background-color: var(--accordion-bg);
+        color: var(--accordion-text);
+        cursor: pointer;
+        padding: 14px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        margin-top: 20px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        border-radius: 8px;
+      }
+
+      .accordion:hover {
+        background-color: #444;
+      }
+
+      .panel {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: var(--panel-bg);
+        color: var(--text-color);
+        margin-top: 10px;
+        border-radius: 8px;
+      }
+
       table {
         width: 100%;
         border-collapse: collapse;
@@ -69,35 +106,7 @@
       }
 
       thead {
-        background-color: #eee;
-      }
-
-      .accordion {
-        background-color: #f2f2f2;
-        color: #333;
-        cursor: pointer;
-        padding: 14px;
-        width: 100%;
-        text-align: left;
-        border: none;
-        outline: none;
-        margin-top: 20px;
-        font-size: 16px;
-        transition: background-color 0.3s ease;
-        border-radius: 8px;
-      }
-
-      .accordion:hover {
-        background-color: #ddd;
-      }
-
-      .panel {
-        padding: 0 18px;
-        display: none;
-        overflow: hidden;
-        background-color: #f9f9f9;
-        margin-top: 10px;
-        border-radius: 8px;
+        background-color: var(--table-head-bg);
       }
     </style>
   </head>
@@ -154,6 +163,46 @@
             필요
           </li>
         </ul>
+      </div>
+
+      <h2>⚙️ 동작 방식</h2>
+      <p>
+        생산형 AI는 주로 <strong>딥러닝(Deep Learning)</strong> 기술 중 하나인
+        <strong>Transformer</strong> 구조를 기반으로 작동합니다.<br />
+        입력된 데이터(예: 문장, 이미지 설명 등)를 이해한 후, 그에 어울리는
+        결과를 예측하며
+        <strong>단어/픽셀/노트/프레임 등</strong>을 하나씩 생성해 나갑니다.
+      </p>
+      <ul>
+        <li>
+          <strong>텍스트:</strong> 단어 단위로 문맥을 예측해 이어지는 문장 생성
+        </li>
+        <li>
+          <strong>이미지:</strong> 설명을 바탕으로 픽셀 또는 벡터 단위로 그림
+          생성
+        </li>
+        <li>
+          <strong>음악:</strong> 코드와 리듬 패턴을 학습하여 새로운 곡 생성
+        </li>
+        <li><strong>코드:</strong> 사용자 요구를 파악해 함수/코드블록 생성</li>
+      </ul>
+
+      <!-- 이미지 추가 -->
+      <div style="text-align: center; margin-top: 30px">
+        <img
+          src="img/ai-flow.png"
+          alt="생산형 AI 동작 흐름도"
+          style="
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+          "
+        />
+        <p
+          style="font-size: 0.9rem; margin-top: 10px; color: var(--text-color)"
+        >
+          ▲ 생산형 AI의 입력 → 딥러닝 모델 → 출력 생성 흐름도
+        </p>
       </div>
 
       <h2>💡 활용 예시</h2>
