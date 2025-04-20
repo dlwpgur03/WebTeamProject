@@ -287,11 +287,13 @@ body {
     height: auto; /* 높이 자동 조정 */
     gap: 20px; /* 간격 줄임 */
     padding: 20px;
+    padding-top: 80px; /* 네비게이션 바 높이 고려 */
     font-size: 24px;
   }
 
   .title-head {
     font-size: 40px; /* 텍스트 크기 줄임 */
+    margin-top: 10px; /* 상단 여백 추가 */
   }
 
   .title-text {
