@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <style></style>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,6 +43,7 @@
         등 다양한 콘텐츠를 <strong>직접 생성</strong>하는 인공지능 기술입니다.
       </p>
 
+      <button class="accordion">🌟 특징 보기/숨기기</button>
       <div class="panel">
         <ul>
           <li>
@@ -143,5 +145,21 @@
     </section>
 
     <script src="main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const acc = document.querySelectorAll('.accordion')
+        acc.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            this.classList.toggle('active')
+            const panel = this.nextElementSibling
+            if (panel.style.display === 'block') {
+              panel.style.display = 'none'
+            } else {
+              panel.style.display = 'block'
+            }
+          })
+        })
+      })
+    </script>
   </body>
 </html>
