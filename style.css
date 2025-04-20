@@ -9,7 +9,9 @@
 :root {
   --bg-color: #ffffff;
   --text-color: #000000;
-  --accordion-bg: #c8baba;
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --accordion-bg: #cfc9c9;
   --accordion-text: #333;
   --accordion-hover: #eaeaea;
   --accordion-hover-text: #111;
