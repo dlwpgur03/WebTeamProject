@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('theme', newTheme)
   })
 })
-
 document.addEventListener('DOMContentLoaded', function () {
   const acc = document.querySelectorAll('.accordion')
   acc.forEach(function (btn) {
