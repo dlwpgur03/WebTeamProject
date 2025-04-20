@@ -1,114 +1,18 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CMD Teamproject - 생산형 AI</title>
+    <title>CMD Teamproject</title>
     <link rel="stylesheet" href="style.css?v=1" />
-    <style>
-      body {
-        margin: 0;
-        font-family: 'Segoe UI', sans-serif;
-        background-color: var(--bg-color);
-        color: var(--text-color);
-      }
-
-      :root {
-        --bg-color: #ffffff;
-        --text-color: #000000;
-      }
-
-      [data-theme='dark'] {
-        --bg-color: #121212;
-        --text-color: #f1f1f1;
-      }
-
-      .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 30px;
-        background-color: #333;
-        color: white;
-      }
-
-      .navbar .nav-menu a {
-        color: white;
-        margin: 0 10px;
-        text-decoration: none;
-      }
-
-      .team-logo {
-        height: 40px;
-      }
-
-      .darkmode-icon {
-        height: 30px;
-        cursor: pointer;
-      }
-
-      .main {
-        padding: 40px;
-        max-width: 900px;
-        margin: auto;
-        line-height: 1.8;
-      }
-
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-      }
-
-      table,
-      th,
-      td {
-        border: 1px solid #ccc;
-        text-align: center;
-        padding: 10px;
-      }
-
-      thead {
-        background-color: #eee;
-      }
-
-      .accordion {
-        background-color: #f2f2f2;
-        color: #333;
-        cursor: pointer;
-        padding: 14px;
-        width: 100%;
-        text-align: left;
-        border: none;
-        outline: none;
-        margin-top: 20px;
-        font-size: 16px;
-        transition: background-color 0.3s ease;
-        border-radius: 8px;
-      }
-
-      .accordion:hover {
-        background-color: #ddd;
-      }
-
-      .panel {
-        padding: 0 18px;
-        display: none;
-        overflow: hidden;
-        background-color: #f9f9f9;
-        margin-top: 10px;
-        border-radius: 8px;
-      }
-    </style>
   </head>
   <body data-theme="light">
     <nav class="navbar">
       <img src="img/teamlogo.png" alt="Team Logo" class="team-logo" />
       <div class="nav-menu">
-        <a href="index.html" class="nav-item">Home</a>
+        <a href="index.html" class="nav-item">Home & Team</a>
         <a href="ai.html" class="nav-item">AI</a>
         <a href="skill.html" class="nav-item">Skill</a>
-        <a href="team.html" class="nav-item">Team</a>
       </div>
       <div class="darkmode-toggle" id="darkmode-toggle">
         <img
@@ -119,98 +23,9 @@
         />
       </div>
     </nav>
-
-    <section class="main">
-      <h1>생산형 AI란?</h1>
-      <p>
-        <strong>생산형 AI(Generative AI)</strong>는 텍스트, 이미지, 음악, 코드
-        등 다양한 콘텐츠를 <strong>직접 생성</strong>하는 인공지능 기술입니다.
-      </p>
-
-      <button class="accordion">🌟 특징 보기/숨기기</button>
-      <div class="panel">
-        <ul>
-          <li>
-            <strong>창의적 생산:</strong> 기존 데이터를 학습해 새로운 콘텐츠
-            생성 가능
-          </li>
-          <li>
-            <strong>범용성:</strong> 텍스트, 이미지, 음악, 코드 등 다양한 형태로
-            확장 가능
-          </li>
-          <li>
-            <strong>대규모 학습:</strong> 방대한 데이터를 기반으로 고도화된 결과
-            생성
-          </li>
-          <li>
-            <strong>자연어 처리 능력:</strong> 사람처럼 문장 이해 및 생성이 가능
-          </li>
-          <li>
-            <strong>협업 가능:</strong> 작문, 디자인 등 창작 도구로 사용 가능
-          </li>
-          <li><strong>빠른 생성 속도:</strong> 몇 초 만에 콘텐츠 생산</li>
-          <li>
-            <strong>윤리적 쟁점:</strong> 허위정보 생성 및 저작권 문제 등 고려
-            필요
-          </li>
-        </ul>
-      </div>
-
-      <h2>💡 활용 예시</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>분야</th>
-            <th>예시</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>텍스트 생성</td>
-            <td>ChatGPT, Claude, Gemini</td>
-          </tr>
-          <tr>
-            <td>이미지 생성</td>
-            <td>DALL·E, Midjourney, Stable Diffusion</td>
-          </tr>
-          <tr>
-            <td>음악 생성</td>
-            <td>Suno, Aiva, Jukebox</td>
-          </tr>
-          <tr>
-            <td>코드 생성</td>
-            <td>GitHub Copilot, CodeWhisperer</td>
-          </tr>
-          <tr>
-            <td>영상 생성</td>
-            <td>Sora, Runway, Pika</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <script>
-      // 다크모드 전환
-      const toggle = document.getElementById('darkmode-toggle')
-      const themeIcon = document.getElementById('theme-icon')
-
-      toggle.addEventListener('click', () => {
-        const body = document.body
-        const isDark = body.getAttribute('data-theme') === 'dark'
-        body.setAttribute('data-theme', isDark ? 'light' : 'dark')
-        themeIcon.src = isDark ? 'img/moon.png' : 'img/sun.png'
-      })
-
-      // 아코디언 기능
-      document.addEventListener('DOMContentLoaded', function () {
-        const acc = document.querySelector('.accordion')
-        const panel = document.querySelector('.panel')
-
-        acc.addEventListener('click', function () {
-          panel.style.display =
-            panel.style.display === 'block' ? 'none' : 'block'
-        })
-      })
-    </script>
+    <div class="title">dsa</div>
+    <!--내용 적는 곳-->
+    <section class="main">dsad</section>
+    <script src="main.js"></script>
   </body>
 </html>
