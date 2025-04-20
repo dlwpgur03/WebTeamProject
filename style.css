@@ -7,8 +7,12 @@
 
 /* 라이트 / 다크모드 색상 변수 정의 */ /*--------------ai 사용--------------*/
 :root {
-  --bg-color: #ffffff;
-  --text-color: #000000;
+  --accordion-bg: #fdfdfd;
+  --accordion-text: #333;
+  --accordion-hover: #eaeaea;
+  --accordion-hover-text: #111;
+  --accordion-active-bg: #cce5ff;
+  --accordion-active-text: #003366;
 }
 
 [data-theme='dark'] {
@@ -98,8 +102,7 @@ body {
   transition: opacity 0.3s;
 }
 
-/* 다크 모드에서 링크 색상 */
-[data-theme='dark'] .main-team-box a {
+다크 모드에서 링크 색상 [data-theme='dark'] .main-team-box a {
   color: #ffffff; /* 다크 모드에서 흰색 */
 }
 
@@ -238,8 +241,8 @@ body {
 }
 
 .accordion {
-  background-color: var(--accordion-bg);
-  color: var(--accordion-text);
+  background-color: var(--accordion-bg, #f0f0f0); /* 기본 배경 */
+  color: var(--accordion-text, #333); /* 기본 텍스트 */
   cursor: pointer;
   padding: 14px;
   width: 100%;
@@ -248,12 +251,18 @@ body {
   outline: none;
   margin-top: 20px;
   font-size: 16px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   border-radius: 8px;
 }
 
 .accordion:hover {
-  background-color: #444;
+  background-color: var(--accordion-hover, #e0e0e0); /* 호버 시 배경 */
+  color: var(--accordion-hover-text, #000); /* 호버 시 텍스트 */
+}
+
+.accordion.active {
+  background-color: var(--accordion-active-bg, #cce5ff); /* 열렸을 때 배경 */
+  color: var(--accordion-active-text, #003366); /* 열렸을 때 텍스트 */
 }
 
 .panel {
