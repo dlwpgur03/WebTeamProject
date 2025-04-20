@@ -1,134 +1,38 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CMD Teamproject - 생산형 AI</title>
+    <title>CMD Teamproject</title>
     <link rel="stylesheet" href="style.css?v=1" />
-    <style>
-      :root {
-        --bg-color: #ffffff;
-        --text-color: #000000;
-        --panel-bg: #f9f9f9;
-        --table-head-bg: #eee;
-        --accordion-bg: #f2f2f2;
-        --accordion-text: #333;
-      }
-
-      [data-theme='dark'] {
-        --bg-color: #121212;
-        --text-color: #f1f1f1;
-        --panel-bg: #1e1e1e;
-        --table-head-bg: #333;
-        --accordion-bg: #2a2a2a;
-        --accordion-text: #f1f1f1;
-      }
-
-      body {
-        margin: 0;
-        font-family: 'Segoe UI', sans-serif;
-        background-color: var(--bg-color);
-        color: var(--text-color);
-      }
-
-      .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 30px;
-        background-color: #333;
-        color: white;
-      }
-
-      .navbar .nav-menu a {
-        color: white;
-        margin: 0 10px;
-        text-decoration: none;
-      }
-
-      .team-logo {
-        height: 40px;
-      }
-
-      .darkmode-icon {
-        height: 30px;
-        cursor: pointer;
-      }
-
-      .main {
-        padding: 40px;
-        max-width: 900px;
-        margin: auto;
-        line-height: 1.8;
-      }
-
-      .accordion {
-        background-color: var(--accordion-bg);
-        color: var(--accordion-text);
-        cursor: pointer;
-        padding: 14px;
-        width: 100%;
-        text-align: left;
-        border: none;
-        outline: none;
-        margin-top: 20px;
-        font-size: 16px;
-        transition: background-color 0.3s ease;
-        border-radius: 8px;
-      }
-
-      .accordion:hover {
-        background-color: #444;
-      }
-
-      .panel {
-        padding: 0 18px;
-        display: none;
-        overflow: hidden;
-        background-color: var(--panel-bg);
-        color: var(--text-color);
-        margin-top: 10px;
-        border-radius: 8px;
-      }
-
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-      }
-
-      table,
-      th,
-      td {
-        border: 1px solid #ccc;
-        text-align: center;
-        padding: 10px;
-      }
-
-      thead {
-        background-color: var(--table-head-bg);
-      }
-    </style>
   </head>
   <body data-theme="light">
+    <!-- ✅ 수정된 navbar 구조 -->
     <nav class="navbar">
-      <img src="img/teamlogo.png" alt="Team Logo" class="team-logo" />
-      <div class="nav-menu">
+      <div class="navbar-left">
+        <img src="img/teamlogo.png" alt="Team Logo" class="team-logo" />
+      </div>
+
+      <div class="navbar-center nav-menu">
         <a href="index.html" class="nav-item">Home</a>
         <a href="ai.html" class="nav-item">AI</a>
         <a href="skill.html" class="nav-item">Skill</a>
         <a href="team.html" class="nav-item">Team</a>
       </div>
-      <div class="darkmode-toggle" id="darkmode-toggle">
-        <img
-          src="img/moon.png"
-          alt="Theme Toggle"
-          class="darkmode-icon"
-          id="theme-icon"
-        />
+
+      <div class="navbar-right">
+        <div class="darkmode-toggle" id="darkmode-toggle">
+          <img
+            src="img/moon.png"
+            alt="Theme Toggle"
+            class="darkmode-icon"
+            id="theme-icon"
+          />
+        </div>
       </div>
     </nav>
 
+    <!-- 내용 -->
     <section class="main">
       <h1>생산형 AI란?</h1>
       <p>
@@ -136,7 +40,6 @@
         등 다양한 콘텐츠를 <strong>직접 생성</strong>하는 인공지능 기술입니다.
       </p>
 
-      <button class="accordion">🌟 특징 보기/숨기기</button>
       <div class="panel">
         <ul>
           <li>
@@ -170,8 +73,8 @@
         생산형 AI는 주로 <strong>딥러닝(Deep Learning)</strong> 기술 중 하나인
         <strong>Transformer</strong> 구조를 기반으로 작동합니다.<br />
         입력된 데이터(예: 문장, 이미지 설명 등)를 이해한 후, 그에 어울리는
-        결과를 예측하며
-        <strong>단어/픽셀/노트/프레임 등</strong>을 하나씩 생성해 나갑니다.
+        결과를 예측하며 <strong>단어/픽셀/노트/프레임 등</strong>을 하나씩
+        생성해 나갑니다.
       </p>
       <ul>
         <li>
@@ -187,7 +90,6 @@
         <li><strong>코드:</strong> 사용자 요구를 파악해 함수/코드블록 생성</li>
       </ul>
 
-      <!-- 이미지 추가 -->
       <div style="text-align: center; margin-top: 30px">
         <img
           src="img/ai-flow.png"
@@ -238,28 +140,6 @@
       </table>
     </section>
 
-    <script>
-      // 다크모드 전환
-      const toggle = document.getElementById('darkmode-toggle')
-      const themeIcon = document.getElementById('theme-icon')
-
-      toggle.addEventListener('click', () => {
-        const body = document.body
-        const isDark = body.getAttribute('data-theme') === 'dark'
-        body.setAttribute('data-theme', isDark ? 'light' : 'dark')
-        themeIcon.src = isDark ? 'img/moon.png' : 'img/sun.png'
-      })
-
-      // 아코디언 기능
-      document.addEventListener('DOMContentLoaded', function () {
-        const acc = document.querySelector('.accordion')
-        const panel = document.querySelector('.panel')
-
-        acc.addEventListener('click', function () {
-          panel.style.display =
-            panel.style.display === 'block' ? 'none' : 'block'
-        })
-      })
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
