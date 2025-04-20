@@ -7,7 +7,9 @@
 
 /* 라이트 / 다크모드 색상 변수 정의 */ /*--------------ai 사용--------------*/
 :root {
-  --accordion-bg: #c8baba;
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --accordion-bg: #cfc9c9;
   --accordion-text: #333;
   --accordion-hover: #eaeaea;
   --accordion-hover-text: #111;
