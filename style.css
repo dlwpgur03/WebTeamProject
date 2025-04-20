@@ -7,7 +7,7 @@
 
 /* 라이트 / 다크모드 색상 변수 정의 */ /*--------------ai 사용--------------*/
 :root {
-  --accordion-bg: #fdfdfd;
+  --accordion-bg: #c8baba;
   --accordion-text: #333;
   --accordion-hover: #eaeaea;
   --accordion-hover-text: #111;
@@ -121,7 +121,7 @@ body {
   font-size: 32px;
 }
 
-/* 메인 콘텐츠 */
+/* 메인 홈페이지지 */
 
 .title-head {
   font-size: 70px;
@@ -145,7 +145,7 @@ body {
   width: 600px;
 }
 
-.main {
+.main-1st {
   max-width: 1200px; /* 최대 너비 설정 */
   margin: 0 auto; /* 가운데 정렬 */
 }
@@ -183,21 +183,6 @@ body {
   transform: translateY(-5px); /* 카드가 살짝 위로 올라가는 효과 */
 }
 
-.main-skill-box {
-  border: 1px solid gray;
-  border-radius: 10px; /* 둥근 테두리 */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
-  width: 300px; /* 카드 너비 고정 */
-  height: 500px;
-  padding: 20px; /* 내부 여백 */
-  text-align: center; /* 텍스트 가운데 정렬 */
-  text-decoration: none; /* 링크 밑줄 제거 */
-}
-
-.skill-text {
-  font-size: 40px;
-}
-
 .main-team-box a {
   text-decoration: none; /* 링크 밑줄 제거 */
   color: #000000; /* 기본 색상 (라이트 모드 기준) */
@@ -207,28 +192,6 @@ body {
 .main-team-img {
   width: 200px;
   border-radius: 30px;
-}
-
-/*----------- 반응형 디자인 ---------------*/
-@media (max-width: 768px) {
-  .navbar {
-    flex-wrap: wrap; /* 작은 화면에서 줄바꿈 */
-    gap: 10px;
-    padding: 10px;
-  }
-
-  .nav-item {
-    font-size: 14px; /* 작은 화면에서 폰트 크기 조정 */
-    padding: 6px 10px;
-  }
-}
-
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  word-break: break-word; /* 긴 단어 자동 줄바꿈 */
 }
 
 .main {
@@ -275,4 +238,132 @@ body {
   border-radius: 8px;
   word-break: keep-all;
   overflow-wrap: break-word;
+}
+
+/*-------------------skill 페이지 디자인-----------*/
+
+.main-skill-box {
+  border: 1px solid gray;
+  border-radius: 10px; /* 둥근 테두리 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+  width: 300px; /* 카드 너비 고정 */
+  height: 500px;
+  padding: 20px; /* 내부 여백 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+  text-decoration: none; /* 링크 밑줄 제거 */
+}
+
+.skill-text {
+  font-size: 40px;
+}
+
+/*----------- 반응형 디자인 ---------------*/
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap; /* 작은 화면에서 줄바꿈 */
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .nav-item {
+    font-size: 14px; /* 작은 화면에서 폰트 크기 조정 */
+    padding: 6px 10px;
+  }
+  .team-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .darkmode-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* 타이틀 섹션 */
+  .title {
+    flex-direction: column; /* 수직 정렬 */
+    height: auto; /* 높이 자동 조정 */
+    gap: 20px; /* 간격 줄임 */
+    padding: 20px;
+    font-size: 24px;
+  }
+
+  .title-head {
+    font-size: 40px; /* 텍스트 크기 줄임 */
+  }
+
+  .title-text {
+    font-size: 18px; /* 서브 텍스트 크기 줄임 */
+  }
+
+  .title-img-1 {
+    width: 300px; /* 이미지 크기 줄임 */
+  }
+
+  .img-body {
+    border-radius: 30px; /* 테두리 둥글기 조정 */
+    padding: 10px;
+  }
+
+  /* 메인 콘텐츠 */
+  .main,
+  .main-1st {
+    padding: 10px;
+  }
+
+  .main-textbox {
+    width: 100%; /* 전체 너비로 확장 */
+    padding: 8px;
+    line-height: 24px;
+  }
+
+  .skill-text {
+    font-size: 20px;
+  }
+
+  .main-team {
+    flex-direction: column; /* 카드를 수직으로 쌓음 */
+    gap: 20px; /* 간격 줄임 */
+    align-items: center;
+  }
+
+  .main-team-box,
+  .main-skill-box {
+    width: 90%; /* 카드 너비 조정 */
+    height: auto; /* 높이 자동 조정 */
+    padding: 15px;
+  }
+
+  .main-team-img {
+    width: 150px; /* 이미지 크기 줄임 */
+  }
+
+  /* ai.html 콘텐츠 */
+  .main h1 {
+    font-size: 28px;
+  }
+
+  .main h2 {
+    font-size: 22px;
+  }
+
+  .main p,
+  .main ul li {
+    font-size: 14px;
+  }
+
+  .main table th,
+  .main table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .accordion {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .panel {
+    padding: 0 10px;
+  }
 }
