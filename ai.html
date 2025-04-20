@@ -1,108 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+  <style></style>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CMD Teamproject</title>
     <link rel="stylesheet" href="style.css?v=1" />
-<<<<<<< HEAD
-    <style>
-      body {
-        margin: 0;
-        font-family: 'Segoe UI', sans-serif;
-        background-color: var(--bg-color);
-        color: var(--text-color);
-      }
-
-      :root {
-        --bg-color: #ffffff;
-        --text-color: #000000;
-      }
-
-      [data-theme='dark'] {
-        --bg-color: #121212;
-        --text-color: #f1f1f1;
-      }
-
-      .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 30px;
-        background-color: #333;
-        color: white;
-      }
-
-      .navbar .nav-menu a {
-        color: white;
-        margin: 0 10px;
-        text-decoration: none;
-      }
-
-      .team-logo {
-        height: 40px;
-      }
-
-      .darkmode-icon {
-        height: 30px;
-        cursor: pointer;
-      }
-
-      .main {
-        padding: 40px;
-        max-width: 900px;
-        margin: auto;
-        line-height: 1.8;
-      }
-
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-      }
-
-      table,
-      th,
-      td {
-        border: 1px solid #ccc;
-        text-align: center;
-        padding: 10px;
-      }
-
-      thead {
-        background-color: #eee;
-      }
-
-      .accordion {
-        background-color: #f2f2f2;
-        color: #333;
-        cursor: pointer;
-        padding: 14px;
-        width: 100%;
-        text-align: left;
-        border: none;
-        outline: none;
-        margin-top: 20px;
-        font-size: 16px;
-        transition: background-color 0.3s ease;
-        border-radius: 8px;
-      }
-
-      .accordion:hover {
-        background-color: #ddd;
-      }
-
-      .panel {
-        padding: 0 18px;
-        display: none;
-        overflow: hidden;
-        background-color: #f9f9f9;
-        margin-top: 10px;
-        border-radius: 8px;
-      }
-    </style>
-=======
->>>>>>> dd34784347203b958e37dd4682b701f9b2ecb945
   </head>
   <body data-theme="light">
     <!-- ✅ 수정된 navbar 구조 -->
@@ -124,22 +27,11 @@
     </nav>
     <div class="title">
       <div class="title-head">
-<<<<<<< HEAD
-        팀 및 주제 <br />소개 페이지 <br /><br />
-        <div class="title-text">
-          팀명의 뜻과 팀원소개, <br />팀원들의 깃허브, 개인포트폴리오가 있고
-          <br />주제와 선정이유가 있습니다.
-        </div>
-      </div>
-      <div class="img-body">
-        <img src="img/teamlogo.png" alt="" class="title-img-1" />
-=======
         팀 및 주제 <br />소개 페이지 <br />
         <div class="title-text">dsadsad</div>
       </div>
       <div class="img-body">
         <img src="img/AI_img.png" alt="" class="title-img-1" />
->>>>>>> dd34784347203b958e37dd4682b701f9b2ecb945
       </div>
     </div>
 
@@ -151,6 +43,7 @@
         등 다양한 콘텐츠를 <strong>직접 생성</strong>하는 인공지능 기술입니다.
       </p>
 
+      <button class="accordion">🌟 특징 보기/숨기기</button>
       <div class="panel">
         <ul>
           <li>
@@ -179,8 +72,6 @@
         </ul>
       </div>
 
-<<<<<<< HEAD
-=======
       <h2>⚙️ 동작 방식</h2>
       <p>
         생산형 AI는 주로 <strong>딥러닝(Deep Learning)</strong> 기술 중 하나인
@@ -220,7 +111,6 @@
         </p>
       </div>
 
->>>>>>> dd34784347203b958e37dd4682b701f9b2ecb945
       <h2>💡 활용 예시</h2>
       <table>
         <thead>
@@ -255,5 +145,21 @@
     </section>
 
     <script src="main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const acc = document.querySelectorAll('.accordion')
+        acc.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            this.classList.toggle('active')
+            const panel = this.nextElementSibling
+            if (panel.style.display === 'block') {
+              panel.style.display = 'none'
+            } else {
+              panel.style.display = 'block'
+            }
+          })
+        })
+      })
+    </script>
   </body>
 </html>

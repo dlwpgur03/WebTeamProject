@@ -219,3 +219,51 @@ body {
     padding: 6px 10px;
   }
 }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  word-break: break-word; /* 긴 단어 자동 줄바꿈 */
+}
+
+.main {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.8;
+  word-break: keep-all; /* 한국어 기준 단어 단위 줄바꿈 */
+  overflow-wrap: break-word; /* 너무 긴 단어는 줄바꿈 */
+}
+
+.accordion {
+  background-color: var(--accordion-bg);
+  color: var(--accordion-text);
+  cursor: pointer;
+  padding: 14px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+}
+
+.accordion:hover {
+  background-color: #444;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: var(--panel-bg);
+  color: var(--text-color);
+  margin-top: 10px;
+  border-radius: 8px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
